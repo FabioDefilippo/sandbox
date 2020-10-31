@@ -39,7 +39,7 @@ namespace sandbox
                             string UTENTE = args[1];
                             string PASSWD = args[2];
                             string ARGOMENTI = args[4];
-                            Console.Error.WriteLine("calculating...");
+                            Console.Error.WriteLine("checking...");
                             if (File.Exists(PROGRAMMA))
                             {
                                 Console.Error.WriteLine("verifying...");
@@ -72,18 +72,18 @@ namespace sandbox
                             }
                             else
                             {
-                                Console.Error.WriteLine("{0} non esiste", PROGRAMMA);
+                                Console.Error.WriteLine("{0} does not exist", PROGRAMMA);
                             }
                         }
                         else
                         {
-                            Console.Error.WriteLine("Domain, Username and Program must be not empty!");
+                            Console.Error.WriteLine("Domain, Username and Program path must be not empty!");
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    Console.Error.WriteLine(ex.Message + "\n" + ex.StackTrace);
+                    Console.Error.WriteLine(ex.Message);
                 }
             }
         }
